@@ -3,6 +3,11 @@
 " Version:            1.0
 " Website:            https://github.com/ronakg/quickr-preview.vim
 
+" 为了实现悬浮 preview 所增加
+nnoremap  <silent><buffer> <down> j:call te#utils#pedit()<cr>
+nnoremap  <silent><buffer> <up> k:call te#utils#pedit()<cr>
+silent! execute 'silent! set previewpopup=height:'.&lines/4.',width:'.&columns.',highlight:Pmenu,border:off'
+
 " OpenPreviewWindow() {{
 "
 " This function opens the specified buffer within the preview window
